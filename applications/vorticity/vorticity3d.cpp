@@ -320,11 +320,11 @@ int main(int argc, char **argv)
 		std::string folder(ss.str());
 		// read velocity field
 		ierr = PetibmFieldRead(
-			folder+"/ux"+extension, "ux", viewerType, ux); CHKERRQ(ierr);
+			folder+"/uy"+extension, "uy", viewerType, uy); CHKERRQ(ierr);
 		if (compute_wz)
 		{
 			ierr = PetibmFieldRead(
-				folder+"/uy"+extension, "uy", viewerType, uy); CHKERRQ(ierr);
+				folder+"/ux"+extension, "ux", viewerType, ux); CHKERRQ(ierr);
 		}
 		if (compute_wx)
 		{
