@@ -273,8 +273,8 @@ PACKAGE_TARNAME = @PACKAGE_TARNAME@
 PACKAGE_URL = @PACKAGE_URL@
 PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_SEPARATOR = @PATH_SEPARATOR@
-PETSC_ARCH = @PETSC_ARCH@
-PETSC_DIR = @PETSC_DIR@
+PETSC_CPPFLAGS = @PETSC_CPPFLAGS@
+PETSC_LDFLAGS = @PETSC_LDFLAGS@
 RANLIB = @RANLIB@
 SED = @SED@
 SET_MAKE = @SET_MAKE@
@@ -337,7 +337,11 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 ACLOCAL_AMFLAGS = -I m4
 AUTOMAKE_OPTION = foreign
-SUBDIRS = src include applications
+SUBDIRS = \
+	src \
+	include \
+	applications
+
 EXTRA_DIST = autogen.sh
 all: all-recursive
 
